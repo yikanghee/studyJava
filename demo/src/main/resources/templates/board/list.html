@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="fragments/common :: head('게시판')"> </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+      th:replace="fragments/common :: menu('board')"
+    ></nav>
+
+    <div class="container">
+      <h2>게시판</h2>
+      <div>총 건수 : <span th:text="${#lists.size(boards)}"></span></div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="board : ${boards}">
+            <th th:text="${board.id}">1</th>
+            <td th:text="${board.title}" href="@{/board/form(id=${board.id})}">Mark</td>
+            <td th:text="${board.content}">Otto</td>
+            <td>홍길동</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-right">
+      <a type="button" class="btn btn-secondary" th:href="@{/board/form}">작성</a>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
