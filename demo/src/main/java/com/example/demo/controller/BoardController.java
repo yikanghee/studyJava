@@ -28,17 +28,17 @@ public class BoardController {
         return "board/list";
     }
 
-    @GetMapping("/form")
-    public String form(Model model, @RequestParam(required = false) Long id) {
-
-        if (id == null) {
-            model.addAttribute("board", new Board());
-        }else{
-            Board board = boardRepository.findById(id).orElse(null);
-            model.addAttribute("board", board);
-        }
-        return "board/form";
-    }
+//    @GetMapping("/form")
+//    public String form(Model model, @RequestParam(required = false) Long id) {
+//
+//        if (id == null) {
+//            model.addAttribute("board", new Board());
+//        }else{
+//            Board board = boardRepository.findById(id).orElse(null);
+//            model.addAttribute("board", board);
+//        }
+//        return "board/form";
+//    }
 
     @PostMapping("/form")
     public String formSubmit(@Valid Board board, BindingResult bindingResult) {
