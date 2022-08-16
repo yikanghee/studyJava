@@ -19,3 +19,5 @@ spring:
       hibernate:
         format_sql: true # 실행되는 query를 보여줌
 
+  jwt:
+    secretKey: {Key}
