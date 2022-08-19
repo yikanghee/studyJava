@@ -24,6 +24,6 @@ spring:
     port: 6379
 
 jwt:
-  secret-key: secret-key
+  secret-key: secret-key-erorororororororororororoororor-advjbaejvneokneroimbaekbnae
   token-validity-in-sec: 100
   refresh-token-validity-in-sec: 604800

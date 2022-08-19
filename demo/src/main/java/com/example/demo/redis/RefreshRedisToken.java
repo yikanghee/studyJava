@@ -2,17 +2,15 @@ package com.example.demo.redis;
 
 import lombok.Builder;
 import lombok.Getter;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
-import javax.persistence.Id;
 
 @Getter
 @RedisHash("RefreshToken")
 public class RefreshRedisToken {
-
     @Id
     private String userId;
-
     private String token;
 
     @Builder
@@ -21,7 +19,7 @@ public class RefreshRedisToken {
         this.token = token;
     }
 
-    static public RefreshRedisToken createToken(String userId, String token) {
+    static public RefreshRedisToken createToken(String userId, String token){
         return new RefreshRedisToken(userId, token);
     }
 

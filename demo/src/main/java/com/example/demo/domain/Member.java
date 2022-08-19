@@ -2,6 +2,7 @@ package com.example.demo.domain;
 
 import lombok.AccessLevel;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Entity
+@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member {
 
@@ -40,4 +42,10 @@ public class Member {
         this.roles = "ROLE_USER";
     }
 
+    public static Member testCreate(String userId, String pw) {
+        return Member.builder()
+                .userId(userId)
+                .pw(pw)
+                .build();
+    }
 }
