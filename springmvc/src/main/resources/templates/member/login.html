@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<th:block th:fragment="setLogin(login)">
+    <body>
+    <div class="member_login">
+        <form>
+            <div class="form-group">
+                <label for="createLogin">아이디</label>
+                <input id="createLogin" class="form-control" placeholder="아이디를 입력해주세요" type="text">
+            </div>
+            <div class="form-group">
+                <label for="createPassword">비밀번호</label>
+                <input id="createPassword" class="form-control" placeholder="비밀번호를 입력해주세요" type="text">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info btn-lg btn-block" onclick="postLogin(event)">로그인</button>
+                <button class="btn btn-info btn-lg btn-block" data-toggle="modal" href="#registerModal">
+                    회원가입
+                </button>
+                <div class="modal fade" id="registerModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h1 class="modal-title" th:align="center">회원가입</h1>
+                            </div>
+                            <div class="modal-body">
+                                <th:block th:replace="~{/member/register :: setRegister(~{this::register})}"></th:block>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a data-toggle="modal" href="#loginModal">LOGIN</a>
+            <div class="modal fade" id="loginModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h1 class="modal-title" th:align="center">로그인</h1>
+                        </div>
+                        <div class="modal-body">
+                            <th:block th:replace="~{/member/login :: setLogin(~{this::login} )}"></th:block>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="find_password">
+                <a data-toggle="modal" href="#find_password">아이디 또는 비밀번호를 잊으셨나요?</a>
+                <div class="modal fade" id="find_passwordModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h1 class="modal-title" th:align="center"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="login_api">
+                <a href="https://kauth.kakao.com/oauth/authorize?client_id=8eac5875b73c2252d735aebae61ddaa2&redirect_uri=http://localhost:8080/member/auth/kakao/callback&response_type=code">
+                    <img th:src="@{static/images/kakao_login_medium_narrow.png}" style="height:60px"/>
+                </a>
+            </div>
+        </form>
+    </div>
+    <script>
+
+        const postLogin = (event) => {
+            event.preventDefault();
+            const userId = document.querySelector('#createLogin').value;
+            const password = document.querySelector('#createPassword').value;
+            const send_param = (
+                userId, password
+            );
+            axios.post('/login', send_param)
+                .then(function (response) {
+                    console.log(response);
+                    alert("로그인 성공했습니다");
+                    location.href = "/posts";
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        };
+
+        const postRegister  = () => {
+            location.href("/register");
+        }
+    </script>
+    </body>
+</th:block>
+</html>

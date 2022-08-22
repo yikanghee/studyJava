@@ -1,8 +1,9 @@
-package hello.springmvc.Controller;
+package hello.springmvc.controller;
 
 import hello.springmvc.entity.Post;
 import hello.springmvc.entity.PostRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +18,14 @@ import java.util.Optional;
 @Controller
 @RequestMapping(value = "/posts", produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
+@Slf4j
 public class PostController {
 
     private final PostRepository postRepository;
 
     @PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> createPost(@RequestBody Map<String, Object> requestBody) {
+
         Post post = Post.builder().title(requestBody.get("title").toString())
                 .contents(requestBody.get("contents").toString()).build();
 
@@ -33,13 +36,12 @@ public class PostController {
 
     @GetMapping(value = "")
     public String getPostList(Model model) {
-
         List<Post> posts = postRepository.findAll();
         model.addAttribute("posts", posts);
         return "index";
     }
 
-    //게시글 추가/수정 페이지
+    // 게시글 추가/수정 페이지
     @GetMapping(value = "/add-post-page")
     public String getAddPostPage(@RequestParam(value = "state", required = false, defaultValue = "create") String state,
                                  @RequestParam(value = "postId", required = false) Long postId, Model model) {
@@ -54,6 +56,7 @@ public class PostController {
         return "add-post-page";
     }
 
+    // 세부 조회
     @GetMapping(value = "/{postId}")
     public Optional<Post> getPost(@PathVariable Long postId) {
         Optional<Post> post = postRepository.findById(postId);
