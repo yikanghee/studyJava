@@ -31,13 +31,25 @@
     </div>
     <script>
 
-
         const postRegister = (event) => {
-
-
-
-            location.href("/register");
+            event.preventDefault();
+            const email = document.querySelector('#createEmail').value;
+            const userId = document.querySelector('#createLogin').value;
+            const password = document.querySelector('#createPassword').value;
+            const send_param = (
+                email, userId, password
+            );
+            axios.post('/member/register', send_param)
+                .then(function (response) {
+                    console.log(response);
+                    alert("로그인 성공했습니다");
+                    location.href = '/posts';
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         };
+
     </script>
     </body>
 </th:block>
