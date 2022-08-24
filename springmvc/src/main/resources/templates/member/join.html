@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns="http://www.w3.org/1999/xhtml">-->
+
+<!--<head>-->
+<!--    <title>회원가입</title>-->
+<!--    <th:block th:replace="~{/css :: setCss(~{this::css} )}"></th:block>-->
+<!--    <th:block th:fragment="setHead(head)"></th:block>-->
+<!--    <th:block th:fragment="setFoot(foot)"></th:block>-->
+<!--</head>-->
+
+
+<!--<body>-->
+
+<!--<th:block th:replace="~{/sementic/header :: setHead(~{this::head} )}"></th:block>-->
+<!--<div class="whole_page_cover">-->
+<!--    <div class="member_insert">-->
+<!--        <h2>회원가입</h2>-->
+<!--        <form>-->
+<!--            <div class="member_insert_input">-->
+<!--                <label for="username"></label>-->
+<!--                <input type="text" placeholder="아이디" id="username"/>-->
+<!--            </div>-->
+
+<!--            <div class="member_insert_input">-->
+<!--                <label for="password"></label>-->
+<!--                <input type="password" placeholder="비밀번호" id="password">-->
+<!--            </div>-->
+
+<!--            <div class="member_insert_input">-->
+<!--                <label for="email"></label>-->
+<!--                <input type="email" placeholder="이메일" id="email">-->
+<!--            </div>-->
+
+<!--            <div class="member_insert_btn">-->
+<!--                <input type="button" value="회원가입" onclick="createRegister(event)">-->
+<!--            </div>-->
+
+<!--            <div class="member_insert_btn">-->
+<!--                <input type="reset" value="다시쓰기">-->
+<!--            </div>-->
+
+<!--        </form>-->
+
+<!--    </div>-->
+
+<!--</div>-->
+<!--<script>-->
+<!--    const createRegister = (event) => {-->
+<!--        event.preventDefault();-->
+<!--        const userId = document.querySelector('#username')-->
+<!--        const password = document.querySelector('#password')-->
+<!--        const email = document.querySelector('#email')-->
+<!--        const send_param = {userId, password, email}-->
+<!--        axios.post('/auth/joinProc', send_param)-->
+<!--            .then(function (response) {-->
+<!--                console.log(response);-->
+<!--                alert("회원가입에 성공했습니다.");-->
+<!--                location.href = "/index";-->
+<!--            })-->
+<!--            .catch(function (error) {-->
+<!--                console.log(error);-->
+<!--            });-->
+<!--    }-->
+<!--</script>-->
+
+<!--<th:block th:replace="~{/sementic/footer :: setFoot(~{this::foot} )}"></th:block>-->
+
+<!--</body>-->
+<!--</html>-->
