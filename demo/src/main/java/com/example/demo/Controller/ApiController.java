@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class ApiController {
 
+    
     private final LoginService loginService;
 
     @PostMapping("/api/v1/signUp")
