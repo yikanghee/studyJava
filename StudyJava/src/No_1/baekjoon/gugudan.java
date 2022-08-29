@@ -66,6 +66,6 @@ public class gugudan {
             b = Integer.parseInt(st.nextToken());
             bw.write("Case #" +i + ": " + (a+b) + "\n");
         }
-        
+
     }
 }
