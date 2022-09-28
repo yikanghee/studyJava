@@ -6,28 +6,32 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 public class jsoup2 {
 
     public static void main(String[] args) throws IOException {
 
+        jsoup1 jsoup1 = new jsoup1();
 
-        Integer[] arr = {147615, 155115, 142869};
+        List<String> codeList = jsoup1.getcode();
+        codeList.remove(0);
+        
+        System.out.println("codeList = " + codeList);
 
-        for (int i : arr) {
-            String url = "https://movie.daum.net/moviedb/main?movieId=" + i;
+        for (String i : codeList) {
 
-            Document doc = Jsoup.connect(url).get();
+            String a = i;
+            System.out.println("https://movie.naver.com/movie/bi/mi/basic.naver?code=" + a.substring(30));
 
-            Elements image2 = doc.select("#mainContent > div > div.box_basic > div.info_poster > div > span");
-//            String image = image2.attr("style").substring(21);
-//            image = image.substring(0, image.length() - 1);
-            String image = image2.attr("style");
+            Document doc = Jsoup.connect("https://movie.naver.com/movie/bi/mi/basic.naver?code=201641").get();
 
-            System.out.println("image = " + image);
+            System.out.println("doc = " + doc);
+            Elements elem = doc.select("#content > div.article");
+
         }
+
+
     }
 
 }

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16f2c77b-faa6-49bd-95a2-72b52f355345" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/controller/NoticeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/domain/NoticeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/dto/NoticeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/repository/NoticeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/service/NoticeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/service/impl/NoticeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/util/CmmUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/util/EncryptUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/java/example/springmongo/util/NetworkUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/webapp/WEB-INF/views/notice/MsgToList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/webapp/WEB-INF/views/notice/NoticeEditInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/webapp/WEB-INF/views/notice/NoticeInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/webapp/WEB-INF/views/notice/NoticeList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMongo/src/main/webapp/WEB-INF/views/notice/NoticeReg.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/No_1/JsoupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/No_1/jsoup3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/constants/PS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/test/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/test/Dish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/test/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyJava/src/test/Shef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SimpleMSA" beforeDir="false" afterPath="$PROJECT_DIR$/../../SimpleMSA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyJava/out/production/StudyJava/No_1/jsoup1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyJava/out/production/StudyJava/No_1/jsoup1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyJava/out/production/StudyJava/No_1/jsoup2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyJava/out/production/StudyJava/No_1/jsoup2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyJava/src/No_1/jsoup1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyJava/src/No_1/jsoup1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyJava/src/No_1/jsoup2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyJava/src/No_1/jsoup2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/session2">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FKyLBtrH7pD18P4kX1HIis17ma" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28653628",
+    "spring.configuration.checksum": "d7d81bedfc9e35e8545dd1ac0a87e12a"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.SpringsessionApplication">
+    <configuration name="Session2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="session2.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="spring.session2.Session2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringsessionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="session1.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="spring.session1.SpringsessionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16f2c77b-faa6-49bd-95a2-72b52f355345" name="Changes" comment="" />
+      <created>1664255013937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664255013937</updated>
+      <workItem from="1664255015081" duration="407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
